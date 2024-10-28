@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Happy Diwali</h1>
+            <p>Celebrate the festival of lights with joy and prosperity!</p>
+        </header>
+        
+        <div class="fireworks"></div>
+
+        <section class="content">
+            <img src="https://img.freepik.com/premium-photo/beautiful-floor-decoration-diwali-with-diya-rangoli-celebration-diwali-with-lights_744422-4556.jpg" alt="Diya" class="diya-img" />
+            
+            <br><br>
+            <h2>Festival of Lights</h2>
+            <br>
+            <p>Diwali, also known as Deepavali, is one of the most popular festivals in India. 
+                It symbolizes the victory of light over darkness and good over evil.</p>
+            <button class="glow-button" onclick="playFireworks()">Celebrate Now</button>
+        </section>
+    </div>
+
+    <!-- Simplified video setup -->
+    <video id="fireworksVideo" class="fireworks-video" src="Diwali vid.mp4" controls></video>
+
+    <footer>
+        <p>&copy; SANYA SUKHYANI, Wishing you a Happy Diwali.!</p>
+    </footer>
+
+    <script>
+        function playFireworks() {
+            const fireworksVideo = document.getElementById("fireworksVideo");
+            fireworksVideo.style.display = "block";
+            fireworksVideo.play();
+
+            // Automatically hide the video after it ends
+            fireworksVideo.onended = () => {
+                fireworksVideo.style.display = "none";
+            };
+        }
+    </script>
+</body>
+</html>
